@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items List</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>ООО "Компания К"</h1>
+    <p>Добро пожаловать</p>
+    <p>ИНН: 000000000</p>
+    <p>Дата операции: {{ current_date }}</p>
+
+    <ul>
+    {% for item in items %}
+        <li style="text-align: left;">{{ item.title }} = {{ item.price }}</li>
+    {% endfor %}
+    </ul>
+
+    <p style="text-align: left; font-weight: bold;">Итоговая сумма: {{ total_amount }}</p>            </body>
+    <p style="text-align: left;">Наличными: {{ total_amount }}</p>
+</html>
